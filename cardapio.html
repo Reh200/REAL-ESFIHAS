@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Pizzas Palace 🍕</title>
+  <link rel="stylesheet" href="css/cardapio.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-container text-center">
+      <h1 class="logo-txt">
+        <img src="img/bebidas-logos/logo3.png" alt="Logo Chefe Express" class="logo-icon">
+        Pizzas Palace
+      </h1>
+
+      <nav aria-label="Navegação principal" class="nav-principal">
+        <a href="index.html">Início</a>
+        <a href="carrinho.html" class="nav-destaque">🛒 Ver Carrinho</a>
+        <a href="contato.html">📲 Contato</a>
+      </nav>
+
+      <div class="sub-header-categorias">
+        <a href="#salgadas" class="cat-link">🍕 Salgadas</a>
+        <a href="#doces" class="cat-link">🍫 Doces</a>
+        <a href="#bebidas" class="cat-link">🥤 Bebidas</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <h2 class="text-center mb-5">Cardápio Completo</h2>
+
+    <section id="salgadas" class="mb-5 categoria-scroll">
+      <h3 class="border-bottom pb-2 mb-4">🍕 Pizzas Salgadas</h3>
+      <div class="grid d-flex flex-wrap justify-content-center gap-4">
+
+        <article class="item card-meio-exclusivo border p-3 rounded shadow-sm text-center" style="width: 250px;"
+          data-categoria="pizza">
+
+          <strong class="d-block h5 mb-1">Monte sua Pizza</strong>
+          <p class="small text-muted my-1">Escolha o tamanho e os dois sabores desejados</p>
+
+          <label class="small text-muted d-block text-start mb-1" for="pizza-tamanho">Tamanho:</label>
+          <select id="pizza-tamanho" class="form-select form-select-sm mb-2">
+            <option value="Média">Média (25cm)</option>
+            <option value="Grande" selected>Grande (35cm)</option>
+          </select>
+
+          <label class="small text-muted d-block text-start mb-1" for="pizza-sabor1">1ª Metade:</label>
+          <select id="pizza-sabor1" class="form-select form-select-sm mb-2">
+          </select>
+
+          <label class="small text-muted d-block text-start mb-1" for="pizza-sabor2">2ª Metade:</label>
+          <select id="pizza-sabor2" class="form-select form-select-sm mb-3">
+          </select>
+
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarPizzaMeioAMeio()">
+            Adicionar ao Carrinho
+          </button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/calabresa.png" alt="Calabresa">
+          <strong class="d-block h5">Calabresa</strong>
+          <p class="small text-muted">Muçarela, calabresa fatiada e cebola</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="34.90">Média - R$ 34,90</option>
+            <option value="39.90">Grande - R$ 39,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/marguerita.jpeg" alt="Marguerita">
+          <strong class="d-block h5">Marguerita</strong>
+          <p class="small text-muted">Muçarela, tomate e manjericão</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="34.90">Média - R$ 34,90</option>
+            <option value="39.90">Grande - R$ 39,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/calabacon.png" alt="Calabacon">
+          <strong class="d-block h5">Calabacon</strong>
+          <p class="small text-muted">Muçarela, calabresa fatiada e bacon</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="34.90">Média - R$ 34,90</option>
+            <option value="39.90">Grande - R$ 39,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/baiana.png" alt="Baiana">
+          <strong class="d-block h5">Baiana</strong>
+          <p class="small text-muted">Muçarela, calabresa ralada, pimenta e cebola</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="34.90">Média - R$ 34,90</option>
+            <option value="39.90">Grande - R$ 39,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/a-moda.png" alt="A moda">
+          <strong class="d-block h5">A Moda</strong>
+          <p class="small text-muted">Muçarela, presunto, ovo, palmito, catupiry, milho e bacon</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="38.00">Média - R$ 38,00</option>
+            <option value="43.00">Grande - R$ 43,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/cala-piry.jpeg" alt="Calabresa com catupiry">
+          <strong class="d-block h5">Calabresa com Catupiry</strong>
+          <p class="small text-muted">Muçarela, calabresa ralada e catupiry</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="41.90">Média - R$ 41,90</option>
+            <option value="44.90">Grande - R$ 44,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/camarao.png" alt="Camarão">
+          <strong class="d-block h5">Camarão</strong>
+          <p class="small text-muted">Muçarela, camarão e catupiry</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="55.00">Média - R$ 55,00</option>
+            <option value="60.00">Grande - R$ 60,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/frango-milho2.png" alt="Frango">
+          <strong class="d-block h5">Frango</strong>
+          <p class="small text-muted">Muçarela, frango, bacon, milho e catupiry</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="41.90">Média - R$ 41,90</option>
+            <option value="44.90">Grande - R$ 44,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/portuguesa.png" alt="Portuguesa">
+          <strong class="d-block h5">Portuguesa</strong>
+          <p class="small text-muted">Muçarela, presunto, ovo, ervilha e cebola</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="38.00">Média - R$ 38,00</option>
+            <option value="43.00">Grande - R$ 43,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/quatro-queijos.jpeg" alt="4 Queijos">
+          <strong class="d-block h5">4 Queijos</strong>
+          <p class="small text-muted">Muçarela, catupiry, cheddar e parmesão</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="38.00">Média - R$ 38,00</option>
+            <option value="43.00">Grande - R$ 43,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/lombo-catupiry.png" alt="Lombo com Catupiry">
+          <strong class="d-block h5">Lombo com Catupiry</strong>
+          <p class="small text-muted">Lombo suíno, catupiry e muçarela</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="38.00">Média - R$ 38,00</option>
+            <option value="43.00">Grande - R$ 43,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/atum.jpeg" alt="Atum">
+          <strong class="d-block h5">Atum</strong>
+          <p class="small text-muted">Muçarela, atum, catupiry e cebola</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="38.00">Média - R$ 38,00</option>
+            <option value="43.00">Grande - R$ 43,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/peperoni.jpeg" alt="Peperoni">
+          <strong class="d-block h5">Peperoni</strong>
+          <p class="small text-muted">Muçarela e pepperoni</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="48.00">Média - R$ 48,00</option>
+            <option value="53.00">Grande - R$ 53,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="doces" class="mb-5 categoria-scroll">
+      <h3 class="border-bottom pb-2 mb-4">🍫 Pizzas Doces</h3>
+      <div class="grid d-flex flex-wrap justify-content-center gap-4">
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/brigadeiro.jpeg" alt="Brigadeiro">
+          <strong class="d-block h5">Brigadeiro</strong>
+          <p class="small text-muted">Brigadeiro e granulado de chocolate</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="30.00">Média - R$ 30,00</option>
+            <option value="35.00">Grande - R$ 35,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/confete.png" alt="Confete">
+          <strong class="d-block h5">Confete</strong>
+          <p class="small text-muted">Creme de avelã, confete e morango</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="45.00">Média - R$ 45,00</option>
+            <option value="50.00">Grande - R$ 50,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/oreo-kit.png" alt="KitKit Oreo">
+          <strong class="d-block h5">KitKat Oreo</strong>
+          <p class="small text-muted">Chocolate ao leite, pedaços de KitKat Oreo e bolachas Oreo</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="43.00">Média - R$ 43,00</option>
+            <option value="50.00">Grande - R$ 50,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="mb-5 border p-4 rounded bg-light shadow-sm">
+      <h3 class="text-center mb-4">🥖 Bordas Recheadas</h3>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center">
+            <span>Cheddar</span> <strong>R$ 8,00</strong>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center">
+            <span>Catupiry</span> <strong>R$ 8,00</strong>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center"><span>4
+              Queijos</span> <strong>R$ 14,00</strong></div>
+        </div>
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center">
+            <span>Chocolate</span> <strong>R$ 12,00</strong>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center">
+            <span>Calabresa com Catupiry</span> <strong>R$ 14,00</strong>
+          </div>
+        </div>
+        <div class="col">
+          <div class="p-2 border rounded bg-white d-flex justify-content-between align-items-center">
+            <span>Doce de Leite</span> <strong>R$ 12,00</strong>
+          </div>
+        </div>
+      </div>
+      <p class="text-muted small mt-3 text-center">* As bordas podem ser solicitadas na finalização do pedido.</p>
+    </section>
+
+    <section id="bebidas" class="mb-5 categoria-scroll">
+      <h3 class="border-bottom pb-2 mb-4">🥤 Bebidas</h3>
+      <div class="grid d-flex flex-wrap justify-content-center gap-4">
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/bebidas-logos/coca1.png" alt="Coca-Cola">
+          <strong class="d-block h5">Refrigerante Coca-Cola 2L</strong>
+          <p class="small text-muted">Original e Sem Açúcar</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="14.00">Tradicional - R$ 14,00</option>
+            <option value="14.00">Sem Açucar - R$ 14,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/bebidas-logos/agua3.png" alt="Água">
+          <strong class="d-block h5">Água 500ml</strong>
+          <p class="small text-muted">Com ou Sem Gás</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="2.00">Sem gás - R$ 2,00</option>
+            <option value="3.00">Com gás - R$ 3,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/bebidas-logos/logo-conquista.jpeg" alt="Conquista">
+          <strong class="d-block h5">Refrigerantes Conquista 2L</strong>
+          <p class="small text-muted">Cola e Guaraná</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="8.00">Guaraná - R$ 8,00</option>
+            <option value="8.00">Guaraná (Sem Açucar) - R$ 8,00</option>
+            <option value="8.00">Cola - R$ 8,00</option>
+            <option value="8.00">Cola (Sem Açucar) - R$ 8,00</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <button id="back-to-top-btn" onclick="voltarAoTopo()" title="Voltar ao topo">
+    &#8593;
+  </button>
+
+  <footer class="text-center py-4 border-top mt-5">
+    <p>&copy; 2026 Pizzas Palace 🍕 - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/cardapio.js"></script>
+</body>
+
+</html>

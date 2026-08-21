@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* =================== Reset e Variáveis =================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --primary-color: #dfa629;
+  /* Dourado */
+  --secondary-color: #2a9d8f;
+  --header-text: #ffffff;
+  --card-bg: #141414;
+  --card-border: #2a2a2a;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* Trava a rolagem global da página */
+html,
+body {
+  height: 100vh;
+  height: 100dvh;
+  /* Altura real para mobile */
+  overflow: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+}
+
+/* =================== Cabeçalho =================== */
+header {
+  background-color: #141414;
+  color: var(--header-text);
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Mantém os elementos centralizados verticalmente */
+  box-shadow: 0 2px 10px var(--shadow);
+  z-index: 1000;
+  border-bottom: 2px solid #b58c38;
+  flex-shrink: 0; /* Garante que o header não seja esmagado */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0; /* Remove margens que podem desalinhar o texto */
+  color: var(--primary-color);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--header-text);
+  font-weight: bold;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+/* =================== Conteúdo Principal =================== */
+main {
+  flex: 1;
+  /* Ocupa o espaço restante entre o header e o footer */
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  /* Permite rolagem apenas dentro do container se precisar */
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+h3 {
+  margin-top: 15px;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #cccccc;
+  max-width: 500px;
+}
+
+/* =================== Botão WhatsApp =================== */
+button {
+  background-color: #25d366;
+  /* Cor oficial do WhatsApp */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 0px #128c7e;
+  margin: 15px 0;
+  width: 100%;
+  max-width: 260px;
+}
+
+button:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* =================== Rodapé =================== */
+footer {
+  background-color: #141414;
+  color: var(--header-text);
+  padding: 6px 12px;
+  /* Altura reduzida */
+  font-size: 0.8rem;
+  /* Tamanho da fonte ligeiramente menor */
+  border-top: 1px solid var(--card-border);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* =================== Responsividade =================== */
+@media (max-width: 480px) {
+  header {
+    padding: 0.6rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header nav {
+    gap: 10px;
+  }
+
+  header nav a {
+    font-size: 0.75rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  main {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+}

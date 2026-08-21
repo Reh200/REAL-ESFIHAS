@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Pizzas Palace 🍕</title>
+  <link rel="stylesheet" href="css/carrinho.css">
+</head>
+
+<body>
+
+  <header class="header-carrinho">
+    <div class="interface">
+      <div class="header-flex">
+        <h1 class="logo-txt">
+          <img src="img/bebidas-logos/logo3.png" alt="Logo" class="logo-icon">
+          Meu Carrinho
+        </h1>
+        <div class="header-acoes">
+          <a href="cardapio.html" class="btn-voltar">Voltar ao Cardápio</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="conteudo-principal interface">
+    <div class="carrinho-grid">
+
+      <section class="col-itens">
+        <h2 class="titulo-sessao">Itens Escolhidos</h2>
+        <div id="lista-pedidos">
+        </div>
+      </section>
+
+      <aside class="col-resumo">
+        <div class="card-resumo">
+          <div class="total-box">
+            <span>Total do Pedido:</span>
+            <h2 id="total-carrinho">R$ 0,00</h2>
+          </div>
+
+          <div class="box-entrega">
+            <strong>⏱ Tempo estimado de entrega:</strong> 35min a 1h, dependendo do fluxo de pedidos.
+          </div>
+
+          <div class="campo-endereco">
+            <label for="endereco">Endereço de Entrega</label>
+            <textarea id="endereco" placeholder="Rua, número, bairro e pontos de referência..."></textarea>
+          </div>
+
+          <div class="campo-contato-detalhes" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+            <div class="campo-nome">
+              <label for="nome">👤 Nome Completo</label>
+              <input type="text" id="nome" placeholder="Seu nome">
+            </div>
+          </div>
+
+          <div class="campo-telefone">
+            <label for="telefone">📱 Número de Contato</label>
+            <input type="tel" id="telefone" placeholder="(DDD) 99999-9999" required>
+          </div>
+
+          <div class="campo-pagamento">
+            <label>💳 Forma de Pagamento (escolha até 2)</label>
+            <div class="opcoes-pagamento">
+
+              <div class="opcao-item">
+                <label class="check-container">
+                  <input type="checkbox" name="metodo" value="Pix" onchange="gerenciarPagamento()"> Pix
+                </label>
+                <input type="text" class="valor-metodo" id="valor-Pix" placeholder="R$ 0,00" style="display: none;"
+                  oninput="mascaraValor(this)">
+              </div>
+
+              <div class="opcao-item">
+                <label class="check-container">
+                  <input type="checkbox" name="metodo" value="Cartão de Crédito" onchange="gerenciarPagamento()"> Cartão
+                  de Crédito
+                </label>
+                <input type="text" class="valor-metodo" id="valor-cartao-de-credito" placeholder="R$ 0,00"
+                  style="display: none;" oninput="mascaraValor(this)">
+              </div>
+
+              <div class="opcao-item">
+                <label class="check-container">
+                  <input type="checkbox" name="metodo" value="Cartão de Débito" onchange="gerenciarPagamento()"> Cartão
+                  de Débito
+                </label>
+                <input type="text" class="valor-metodo" id="valor-cartao-de-debito" placeholder="R$ 0,00"
+                  style="display: none;" oninput="mascaraValor(this)">
+              </div>
+
+              <div class="opcao-item">
+                <label class="check-container">
+                  <input type="checkbox" name="metodo" value="Dinheiro" onchange="gerenciarPagamento()"> Dinheiro
+                </label>
+                <input type="text" class="valor-metodo" id="valor-dinheiro" placeholder="R$ 0,00" style="display: none;"
+                  oninput="mascaraValor(this); gerenciarPagamento()">
+              </div>
+              
+            </div>
+            <p class="small text-muted mt-2"
+              style="font-size: 0.85rem; color: #666; margin-top: 10px; font-style: italic;">
+              * O link para pagamento será enviado e finalizado via WhatsApp após a confirmação do pedido.
+            </p>
+          </div>
+
+          <div id="box-troco" style="display: none;">
+            <label>PRECISA DE TROCO PARA QUANTO?</label>
+            <input type="text" id="troco" placeholder="Ex: 100,00" oninput="mascaraValor(this)">
+          </div>
+
+          <div class="acoes-carrinho">
+            <button id="btn-finalizar" class="btn-finalizar" onclick="finalizarPedido()">
+              Finalizar Pedido 🍕
+            </button>
+            <div id="walletBrick_container"></div>
+            <button class="btn-esvaziar" onclick="removerTodos()">Esvaziar Carrinho</button>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <script src="js/carrinho.js"></script>
+
+</body>
+
+</html>

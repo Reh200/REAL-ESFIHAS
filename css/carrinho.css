@@ -1,0 +1,477 @@
+:root {
+    --bg-site: #0d0d0d;
+    --texto-claro: #ffffff;
+    --vermelho: #dfa629; /* Dourado */
+    --cinza-escuro: #cccccc;
+    --cinza-borda: #2a2a2a;
+    --sombra: rgba(0, 0, 0, 0.6);
+    --input-bg: #1f1f1f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: var(--bg-site);
+    color: var(--texto-claro);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Garante que o conteúdo ocupe todo o espaço disponível após remover o footer */
+.conteudo-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =================== CABEÇALHO E RODAPÉ (MANTIDOS) =================== */
+header {
+    background-color: #141414;
+    color: var(--texto-claro);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #b58c38;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 35px; /* Altura do cabeçalho bem fina */
+}
+
+.logo-txt {
+    display: flex;
+    align-items: center;
+    position: relative; /* Base para o posicionamento da logo */
+    padding-left: 70px; /* Cria o espaço exato para a logo grande ficar à esquerda do texto */
+    height: 100%;       /* Ocupa a altura total para alinhar o texto perfeitamente */
+    font-size: 1.1rem; 
+    font-weight: bold;
+    color: var(--vermelho);
+}
+
+.logo-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza a logo verticalmente em relação à barra */
+    width: 60px;  /* Tamanho grande da logo */
+    height: 60px; /* Tamanho grande da logo */
+    object-fit: contain;
+    z-index: 1001; /* Faz a logo flutuar por cima da barra dourada */
+    pointer-events: none; /* Evita que a imagem atrapalhe cliques no texto */
+}
+
+.btn-voltar {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(223, 166, 41, 0.5);
+    padding: 2px 10px; 
+    border-radius: 3px; 
+    font-size: 0.75rem; 
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: var(--vermelho);
+    color: #0d0d0d;
+}
+
+/* =================== LAYOUT E GRID =================== */
+.interface {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.carrinho-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 20px;
+}
+
+/* =================== ITENS DO CARRINHO =================== */
+.item-pedido {
+    background: #141414;
+    border-radius: 6px; 
+    padding: 12px 15px; 
+    margin-bottom: 10px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--cinza-borda);
+    gap: 10px;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 0; /* Impede que quebras de texto quebrem o layout do flex */
+}
+
+.info-item strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--cinza-escuro);
+    white-space: normal;
+    word-break: break-word;
+}
+
+.form-select-sm {
+    padding: 4px 6px;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 4px;
+    font-size: 12px;
+    color: #e0e0e0;
+    background: #1a1a1a;
+}
+
+.preco-subtotal {
+    color: var(--vermelho);
+    font-weight: bold;
+    font-size: 1rem; 
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--cinza-borda);
+    border-radius: 3px; 
+    margin: 5px 0;
+    background: #1f1f1f;
+    width: max-content;
+    margin-left: auto; /* Mantém alinhado à direita */
+}
+
+.btn-group button {
+    border: none;
+    background: #1a1a1a;
+    color: var(--texto-claro);
+    padding: 4px 10px; 
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-group button:hover {
+    background: var(--vermelho);
+    color: #0d0d0d;
+}
+
+.btn-group span {
+    padding: 0 10px; 
+    font-size: 0.85rem; 
+    color: var(--texto-claro);
+}
+
+.btn-remover {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 0.7rem; 
+    text-transform: lowercase;
+    transition: color 0.2s;
+    display: block;
+    margin-left: auto;
+}
+
+.btn-remover:hover {
+    color: var(--vermelho);
+}
+
+/* =================== RESUMO, ENDEREÇO E PAGAMENTO =================== */
+.card-resumo {
+    background: #141414;
+    padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid var(--cinza-borda);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    position: relative;
+    height: auto;
+    overflow: visible;
+}
+
+.card-resumo h2.titulo-sessao {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--vermelho);
+    margin-bottom: 10px; 
+    border-bottom: 1px solid var(--cinza-borda);
+    padding-bottom: 5px; 
+}
+
+.total-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: -6px auto 12px auto; 
+    width: 100%;
+    padding: 0 0 6px 0;
+    border-bottom: 1px dashed var(--cinza-borda);
+}
+
+.total-box span {
+    font-size: 0.85rem; 
+    font-weight: 600;
+    color: var(--cinza-escuro);
+    text-transform: uppercase;
+}
+
+#total-carrinho {
+    font-size: 1.6rem;
+    color: var(--vermelho);
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.campo-nome label,
+.campo-endereco label,
+.campo-pagamento label,
+.campo-troco label,
+.campo-telefone label,
+.campo-obs label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.65rem; 
+    color: var(--texto-claro);
+    margin-bottom: 3px; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.campo-contato-detalhes {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 0 !important;
+}
+
+.campo-endereco,
+.campo-contato-detalhes,
+.campo-telefone,
+.campo-pagamento,
+.campo-troco,
+.campo-obs {
+    margin-bottom: 10px !important; /* Ligeiramente reduzido para aproximar os blocos */
+}
+
+.campo-nome {
+    margin-bottom: 0 !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* MODIFICADO: Diminuída a altura e a fonte dos inputs para ficarem mais compactos no PC */
+.campo-nome input,
+.campo-endereco textarea,
+.campo-obs textarea,
+.campo-telefone input,
+.campo-troco input,
+#troco,
+#nome,
+#telefone {
+    width: 100% !important;
+    padding: 3px 6px; /* Padding reduzido verticalmente */
+    border: 0.5px solid var(--cinza-borda); 
+    border-radius: 4px; 
+    font-size: 0.8rem; /* Tamanho do texto ajustado para o novo espaço */
+    color: var(--texto-claro);
+    background-color: var(--input-bg);
+    transition: all 0.2s;
+    line-height: 1.1; 
+    resize: none;
+    height: 24px; /* MODIFICADO: Reduzido de 36px para 26px */
+    box-sizing: border-box;
+}
+
+/* MODIFICADO: Tratamento compacto de altura para as caixas de texto multilinha */
+.campo-endereco textarea,
+.campo-obs textarea {
+    height: 24px !important; /* MODIFICADO: Reduzido de 60px para 45px */
+}
+
+textarea:focus,
+input:focus,
+#troco:focus {
+    outline: none;
+    border: 0.5px solid var(--vermelho);
+    background-color: #222;
+    box-shadow: none;
+}
+
+.box-entrega {
+    font-size: 0.85rem; 
+    color: #ccc;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px; 
+    margin-top: 12px !important; 
+    margin-bottom: 5px; 
+    border-left: 4px solid #ffc107;
+}
+
+.opcoes-pagamento {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px; 
+    margin-top: 5px; 
+}
+
+.check-container {
+    background: #141414;
+    border: 1px solid var(--cinza-borda);
+    padding: 5px 8px; 
+    border-radius: 4px; 
+    font-size: 0.75rem; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--texto-claro);
+    user-select: none;
+}
+
+.check-container input {
+    accent-color: var(--vermelho);
+    width: 12px;
+    height: 12px;
+}
+
+/* Estilização para os inputs de valores criados via JavaScript */
+[id^="valor-"] {
+    margin-top: 5px;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.btn-finalizar {
+    width: 100%;
+    background-color: var(--vermelho);
+    color: #0d0d0d;
+    border: none;
+    padding: 8px; 
+    border-radius: 4px; 
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 5px; 
+    box-shadow: 0 3px 0px #ab7c1c;
+    transition: all 0.2s;
+}
+
+.btn-finalizar:hover {
+    background-color: #c48c22;
+    transform: translateY(-2px);
+}
+
+.btn-esvaziar {
+    display: block;
+    width: 100%;
+    margin-top: 5px; 
+    color: var(--cinza-escuro);
+    font-size: 0.75rem; 
+    text-decoration: underline;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+}
+
+.btn-esvaziar:hover {
+    color: var(--vermelho);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-3px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =================== MEDIA QUERIES PARA CELULAR =================== */
+
+@media (max-width: 850px) {
+    .carrinho-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 8px 0;
+    }
+    
+    .header-flex {
+        padding: 0 10px;
+    }
+
+    .logo-txt {
+        font-size: 0.95rem;
+    }
+
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .interface {
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+
+    /* Redesenho do item do carrinho para visualização em telas pequenas */
+    .item-pedido {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px;
+        position: relative;
+    }
+
+    .controles-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px dashed #222;
+    }
+
+    .btn-group {
+        margin: 0;
+    }
+
+    .btn-remover {
+        margin: 0;
+    }
+    
+    .campo-borda-item select {
+        max-width: 100% !important; 
+        width: 100%;
+    }
+
+    .opcoes-pagamento {
+        grid-template-columns: 1fr; 
+    }
+    
+    .check-container {
+        padding: 12px 10px; 
+        font-size: 0.85rem;
+    }
+}

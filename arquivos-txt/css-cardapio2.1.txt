@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cardápio | Chefe Express🍕</title>
+  <link rel="stylesheet" href="css/cardapio.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Chefe Express🍕</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Cardápio</h2>
+
+    <!-- Pizzas Tradicionais -->
+    <section>
+      <h3>🍕 Pizzas Tradicionais</h3>
+      <div class="grid">
+        <article class="item">
+          <img src="img/calabresa.jpg" alt="Pizza Calabresa">
+          <h4>Calabresa</h4>
+          <p>Molho, queijo, calabresa e cebola</p>
+          <span class="preco">R$ 35,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/frango-catupiry.jpeg" alt="Pizza Frango com Catupiry">
+          <h4>Frango com Catupiry</h4>
+          <p>Frango desfiado, molho e catupiry</p>
+          <span class="preco">R$ 38,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/portuguesa.jpeg" alt="Pizza Portuguesa">
+          <h4>Portuguesa</h4>
+          <p>Presunto, ovos, cebola, azeitonas e tomate</p>
+          <span class="preco">R$ 40,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pizzas Vegetarianas -->
+    <section>
+      <h3>🌱 Pizzas Vegetarianas</h3>
+      <div class="grid">
+        <article class="item">
+          <img src="img/margherita.jpeg" alt="Pizza Margherita">
+          <h4>Margherita</h4>
+          <p>Tomate, manjericão e mussarela</p>
+          <span class="preco">R$ 36,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/vegetariana.jpg" alt="Pizza Vegetariana">
+          <h4>Vegetariana</h4>
+          <p>Abobrinha, berinjela, pimentão, cebola roxa e azeitona</p>
+          <span class="preco">R$ 39,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/queijo-tomate.jpg" alt="Pizza Queijo e Tomate">
+          <h4>Queijo e Tomate</h4>
+          <p>Mussarela, tomate fresco e orégano</p>
+          <span class="preco">R$ 35,00</span>
+          <button onclick="enviarPedido(this, 'pizza')">Pedir</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Pizzas Doces -->
+    <section>
+      <h3>🍫 Pizzas Doces</h3>
+      <div class="grid">
+        <article class="item">
+          <img src="img/chocolate.jpg" alt="Pizza de Chocolate">
+          <h4>Chocolate</h4>
+          <p>Chocolate derretido com granulado</p>
+          <span class="preco">R$ 30,00</span>
+          <button onclick="enviarPedido(this, 'pizza doce')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/banana-canela.jpg" alt="Pizza de Banana com Canela">
+          <h4>Banana com Canela</h4>
+          <p>Banana, açúcar e canela</p>
+          <span class="preco">R$ 28,00</span>
+          <button onclick="enviarPedido(this, 'pizza doce')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/sensacao.jpg" alt="Pizza Sensação">
+          <h4>Sensação</h4>
+          <p>Chocolate com morangos</p>
+          <span class="preco">R$ 33,00</span>
+          <button onclick="enviarPedido(this, 'pizza doce')">Pedir</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bebidas -->
+    <section>
+      <h3>🥤 Bebidas</h3>
+      <div class="grid">
+        <article class="item">
+          <img src="img/refrigerante.jpg" alt="Refrigerante 2L">
+          <h4>Refrigerante 2L</h4>
+          <p>Coca-Cola, Guaraná ou Fanta</p>
+          <span class="preco">R$ 10,00</span>
+          <button onclick="enviarPedido(this, 'bebida')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/agua.jpg" alt="Água Mineral">
+          <h4>Água Mineral</h4>
+          <p>Com ou sem gás</p>
+          <span class="preco">R$ 3,00</span>
+          <button onclick="enviarPedido(this, 'bebida')">Pedir</button>
+        </article>
+
+        <article class="item">
+          <img src="img/suco.jpg" alt="Suco Natural">
+          <h4>Suco Natural</h4>
+          <p>Laranja, maracujá ou uva</p>
+          <span class="preco">R$ 6,00</span>
+          <button onclick="enviarPedido(this, 'bebida')">Pedir</button>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

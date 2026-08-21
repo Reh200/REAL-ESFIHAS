@@ -1,0 +1,646 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* =================== Reset básico =================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #ffffff;
+  --primary-color: #dfa629; /* Dourado Principal */
+  --secondary-color: #b58c38; /* Dourado Secundário / Linhas */
+  --header-text: #fff;
+  --card-bg: #141414;
+  --card-border: #2a2a2a;
+  --input-bg: #1f1f1f;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+/* =================== Corpo da página =================== */
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =================== Cabeçalho =================== */
+header {
+  background-color: #141414;
+  color: var(--header-text);
+  padding: 0.6rem 1rem;
+  box-shadow: 0 4px 15px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--secondary-color);
+  height: auto;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  flex-shrink: 0;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.logo-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--header-text);
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: var(--primary-color);
+}
+
+/* Botão no topo */
+.btn-header {
+  background-color: var(--primary-color);
+  color: #0d0d0d !important;
+  padding: 6px 12px !important;
+  border-radius: 20px;
+  font-size: 0.8rem !important;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease !important;
+}
+
+.btn-header:hover {
+  background-color: #c48c22;
+  transform: translateY(-2px);
+}
+
+/* =================== Subcabeçalho de Categorias =================== */
+.sub-header-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  padding-bottom: 3px;
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.sub-header-categorias::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-link {
+  text-decoration: none;
+  background-color: #1a1a1a;
+  color: var(--header-text);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border: 1px solid rgba(181, 140, 56, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cat-link:hover {
+  background-color: var(--primary-color);
+  color: #0d0d0d;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.cat-link.promo {
+  background-color: #1a1a1a;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.cat-link.promo:hover {
+  background-color: var(--primary-color);
+  color: #0d0d0d;
+}
+
+/* =================== Ajuste de Scroll =================== */
+section {
+  scroll-margin-top: 160px;
+}
+
+/* =================== Layout e Títulos Gerais =================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  margin: 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-shadow: 1px 2px 4px rgba(0,0,0,0.8);
+}
+
+h2::after {
+  content: "";
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  margin-top: 5px;
+}
+
+h3.border-bottom {
+  text-align: center !important;
+  display: block !important;
+  width: 100%;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--secondary-color) !important;
+  padding-bottom: 12px !important;
+  margin-top: 30px !important;
+  margin-bottom: 25px !important;
+}
+
+/* =================== Seções e Bordas =================== */
+section.mb-5.border {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  padding: 0.8rem !important;
+  border-radius: 8px !important;
+  margin-bottom: 1.5rem !important;
+  box-shadow: 0 4px 10px var(--shadow) !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+section.mb-5.border h3 {
+  text-align: left;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 5px;
+  color: var(--primary-color);
+}
+
+section.mb-5.border .row {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 0.5rem !important;
+  justify-content: center;
+}
+
+section.mb-5.border .bg-white.d-flex {
+  padding: 0.5rem 0.8rem !important;
+  border: 1px solid var(--card-border) !important;
+  border-radius: 4px !important;
+  background-color: var(--input-bg) !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  color: var(--text-color) !important;
+  font-size: 0.9rem;
+}
+
+p.text-muted.small.mt-3.text-center {
+  background: none !important;
+  border: none !important;
+  padding: 0.2rem !important;
+  margin: 0.5rem auto !important;
+  font-size: 0.75rem !important;
+  color: var(--secondary-color) !important;
+  opacity: 0.8;
+}
+
+/* =================== Grid de Itens Padrão =================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center;
+  justify-content: center;
+}
+
+.item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.8rem;
+}
+
+.item h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  min-height: 2.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item p {
+  color: #ccc;
+  opacity: 0.9;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-preco {
+  width: 100% !important;
+  padding: 5px 10px !important;
+  margin-bottom: 20px !important;
+  border-radius: 8px !important;
+  border: 1px solid var(--card-border) !important;
+  background-color: var(--input-bg) !important;
+  color: var(--text-color) !important;
+  box-sizing: border-box;
+}
+
+.item button {
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-weight: 800;
+  color: #0d0d0d;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  min-height: 32px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  margin-top: auto;
+  box-shadow: 0 3px 0px #ab7c1c;
+  box-sizing: border-box;
+}
+
+.item button:hover {
+  background-color: #c48c22;
+  transform: translateY(-2px);
+}
+
+/* =================== Botão de Voltar ao Topo =================== */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color, #b58c38);
+  color: #1a1a1a;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+#back-to-top-btn:hover {
+  background-color: #c48c22;
+  transform: translateY(-3px);
+}
+
+/* =================== Footer =================== */
+footer {
+  background-color: #141414;
+  color: var(--primary-color);
+  text-align: center;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-top: auto;
+  border-top: 3px solid var(--secondary-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ==================================================
+   CSS EXCLUSIVO PARA O CARD MEIO A MEIO (SETA ÚNICA FIXADA)
+   ================================================== */
+
+.item.card-meio-exclusivo, .card-meio-a-meio {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border) !important;
+  border-radius: 8px !important;
+  padding: 0.8rem !important; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px !important;
+  max-width: 250px !important;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+/* Badge flutuante caso queira usar no topo do card */
+.card-badge {
+  background-color: var(--primary-color);
+  color: #0d0d0d;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+}
+
+/* Aplica o dourado apenas no título do card Meio a Meio */
+.card-meio-exclusivo strong.h5, .card-meio-exclusivo .titulo-meio-a-meio {
+  color: var(--primary-color) !important;
+  font-size: 1.05rem !important;
+  display: block;
+  margin-top: 5px !important;
+  margin-bottom: 2px !important;
+}
+
+/* Espaçamento compacto da descrição */
+.card-meio-exclusivo p.small, .card-meio-exclusivo .descricao-meio-a-meio {
+  font-size: 0.72rem !important;
+  color: #aaa;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+  line-height: 1.1 !important;
+}
+
+/* Container que empilha os seletores de tamanho e metades */
+.opcoes-meio-a-meio {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; 
+  margin-bottom: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.campo-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Configuração dos textos das etiquetas (Tamanho, Metades) */
+.campo-item label, .card-meio-exclusivo label.small {
+  font-size: 0.62rem !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  margin-bottom: 1px !important;
+  display: block;
+  text-align: left;
+}
+
+/* CORREÇÃO DEFINITIVA DO SELECT: Força o navegador a deletar a seta do Bootstrap */
+.card-meio-exclusivo .form-select, .item.card-meio-exclusivo select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  
+  /* Força a cor escura e limpa no fundo */
+  background-color: #222 !important;
+  color: #fff !important;
+  border: 1px solid var(--card-border, #333) !important;
+  border-radius: 4px !important;
+  font-size: 0.75rem !important;
+  height: 28px !important; 
+  padding: 0 24px 0 6px !important; /* Mantém o texto longe da seta direita */
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  
+  /* Desenha estritamente uma ÚNICA seta branca à direita */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 8px center !important;
+  background-size: 10px 10px !important;
+}
+
+/* AFASTAMENTO DO BOTÃO: Respiro ideal no último select do card meio a meio */
+.card-meio-exclusivo #pizza-sabor2, 
+.card-meio-exclusivo select:last-of-type {
+  margin-bottom: 14px !important; 
+}
+
+/* Ajusta o tamanho e restaura a fonte correta do botão de adicionar deste card */
+.card-meio-exclusivo button, .card-meio-a-meio button {
+  width: 100% !important;
+  box-sizing: border-box;
+  margin-top: 0 !important;
+  font-family: inherit !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  font-size: 0.75rem !important;
+}
+
+/* =================== Responsividade =================== */
+@media (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  section.mb-5.border .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  section.mb-5.border .row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header nav a {
+    font-size: 0.75rem;
+  }
+  
+  h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 15px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
+  .item {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  section.mb-5.border .row {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #back-to-top-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 13px;
+    font-size: 1.1rem;
+  }
+
+  section.mb-5.border .row {
+    grid-template-columns: 1fr !important;
+    gap: 0.3rem !important;
+  }
+
+  section.mb-5.border {
+    padding: 0.5rem !important;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    width: 50px;
+    height: 50px;
+    margin: -5px 0;
+  }
+
+  header nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  header nav a {
+    padding: 2px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .cat-link {
+    padding: 4px 8px;
+    font-size: 0.65rem;
+  }
+}

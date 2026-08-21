@@ -1,0 +1,95 @@
+Pizzas Promocionais
+Bacon
+Muçarela, alho, tomate, orégano e azeitona 35,90 45,90
+Batata Frita
+Muçarela, bacon, catupiry e batata frita 35,90 45,90
+Baiana
+Muçarela, calabresa ralada pimenta e cebola 35,90 45,90
+Calabacon
+Muçarela, calabresa fatiada e bacon 35,90 45,90
+Frango
+Muçarela, frango, bacon, milho e catupiry 35,90 45,90
+Hambúrguer
+Muçarela, hambúrguer e cheddar 35,90 45,90
+Muçarela
+Muçarela, tomate, orégano e azeitona 35,90 45,90
+Napolitana
+Muçarela, alho, parmesão, tomate e manjericão 35,90 45,90
+Presunto
+Muçarela, presunto e orégano 35,90 45,90
+Pizzas Salgadas
+Alface
+Muçarela, alface, batata palha, bacon e molho 46,90 56,90
+A moda
+Muçarela, presunto, ovo, palmito, catupiry, milho e bacon 46,90 56,90
+Atum
+Muçarela, atum e cebola 49,90 59,90
+Brócolis com creme de alho
+Muçarela, brócolis, no molho de alho e bacon 51,90 61,90
+Calabresa com catupiry
+Muçarela, calabresa ralada e catupiry 51,90 61,90
+Contra filé
+Muçarela, contra filé e cebola 55,90 68,90
+Coraçãozinho de frango
+Muçarela, coração ao molho, parmesão e catupiry 48,90 58,90
+Cupim
+Muçarela, Cupim 55,90 65,90
+Fraldinha ao alho
+Muçarela, fraldinha e alho frito 57,90 67,90
+Filézinho de carne
+Muçarela, filé de carne, com creme de gorgonzola 58,90 68,90
+Filézinho de frango
+Muçarela, filé de frango com creme de gorgonzola 57,90 67,90
+Lombo com catupiry
+Muçarela, lombinho e catupiry 47,90 57,90
+Palmito com catupiry
+Muçarela, palmito de catupiry 52,90 62,90
+Pepperoni
+Muçarela e pepperoni 52,90 62,90
+Portuguesa
+Muçarela, presunto, ovo, ervilha e cebola 51,90 61,90
+Três Queijo
+Muçarela, catupiry e orégano 52,90 59,90
+4 Queijo
+Muçarela, gorgonzola e catupiry 53,90 63,90
+5 Queijo
+Muçarela, gorgonzola, catupiry e cheddar 53,90 63,90
+Rúcula com tomate seco
+Muçarela, tomate seco e rúcula 49,90 58,90
+Strogonoff de carne
+Muçarela, Strogonoff de carne, catupiry e batata palha 51,90 61,90
+Strogonoff de frango
+Muçarela, Strogonoff de frango, catupiry e batata palha 53,90 63,90
+Vegetariana
+Muçarela, ervilha, milho brócolis e palmito 50,90 61,90
+Pizzas Doces
+Abacaxi com canela
+Muçarela, abacaxi na calda, canela e leite condensado 41,90 51,90
+Abacaxi nevado
+Abacaxi na calda, morando e chocolate branco 46,90 56,90
+Banana com canela
+Muçarela, banana caramelizada na canela e leite condensado 41,90 51,90
+Banana nevada
+Banana, chocolate branco e morango 46,90 56,90
+Brigadeiro
+Brigadeiro e granulado de chocolate 43,90 53,90
+Confete
+Nutella, confeti e morango 51,90 61,90
+Dois Amores
+Chocolate ao leite e chocolate branco 51,90 61,90
+Kit Kat
+Creme de avelã e kit Kat 51,90 61,90
+Laka oreo
+Chocolate ao leite, pedaços de Laka Oreo e bolachas Oreo 51,90 61,90
+Nevasca
+Chocolate branco e Chocolate ao leite 55,90 61,90
+Nutela com morando
+Nutella e morando 55,90 65,90
+BORDAS RECHEADAS
+Cheddar 8,00
+Catupiry 8,00
+Calabresa com catupiry 14,00
+4 Queijo 14,00
+Chocolate 12,00
+Doce de Leite 12,00
+

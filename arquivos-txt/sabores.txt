@@ -1,0 +1,96 @@
+<article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/batata-pizza.png" alt="Batata Frita">
+          <strong class="d-block h5">Batata Frita</strong>
+          <p class="small text-muted">Muçarela, bacon, catupiry e batata frita</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/bacon.png" alt="Pizza Bacon">
+          <strong class="d-block h5">Bacon</strong>
+          <p class="small text-muted">Muçarela, alho, tomate, orégano e azeitona</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/frango-milho2.png" alt="Frango">
+          <strong class="d-block h5">Frango</strong>
+          <p class="small text-muted">Muçarela, frango, bacon, milho e catupiry</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/hamburguer-pizza.jpeg" alt="Hambúrguer">
+          <strong class="d-block h5">Hambúrguer</strong>
+          <p class="small text-muted">Muçarela, hambúrguer e cheddar</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/napolitana.jpeg" alt="Napolitana">
+          <strong class="d-block h5">Napolitana</strong>
+          <p class="small text-muted">Muçarela, alho, parmesão, tomate e manjericão</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/presunto.jpeg" alt="Presunto">
+          <strong class="d-block h5">Presunto</strong>
+          <p class="small text-muted">Muçarela, presunto e orégano</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="35.90">Média - R$ 35,90</option>
+            <option value="45.90">Grande - R$ 45,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/alface.png" alt="Pizza Alface">
+          <strong class="d-block h5">Alface</strong>
+          <p class="small text-muted">Muçarela, alface, batata palha, bacon e molho</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="46.90">Média - R$ 46,90</option>
+            <option value="56.90">Grande - R$ 56,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
+        <article class="item border p-3 rounded shadow-sm text-center" style="width: 250px;">
+          <img class="img-fluid rounded mb-2" src="img/atum.jpeg" alt="Pizza Atum">
+          <strong class="d-block h5">Atum</strong>
+          <p class="small text-muted">Muçarela, atum e cebola</p>
+          <select class="form-select form-select-sm mb-2 select-preco">
+            <option value="49.90">Média - R$ 49,90</option>
+            <option value="59.90">Grande - R$ 59,90</option>
+          </select>
+          <button class="btn btn-primary btn-sm w-100" onclick="adicionarAoCarrinho(this)">Adicionar ao
+            Carrinho</button>
+        </article>
+
